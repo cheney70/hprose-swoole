@@ -199,9 +199,13 @@ The result of invoking is a promise object, you can also specify the callback fu
 |error    |It is an object of Exception, if no error, its value is null.      |
 
 ###
-swoole_async_set 函数
+```
+注释 swoole_async_set
+```
 
 ### 修复异步调用问题（新版本Swoole 连接方式更新过了）
+```
 //$conn = new swoole_client($client->type, SWOOLE_SOCK_ASYNC);
 //todo 异步操作链接方式已更新
 $conn = new \Swoole\Async\Client(SWOOLE_SOCK_TCP);
+```
