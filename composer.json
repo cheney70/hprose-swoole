@@ -1,5 +1,5 @@
 {
-    "name": "hprose/hprose-swoole",
+    "name": "cheney70/hprose-swoole",
     "type": "library",
     "description": "Hprose asynchronous client & standalone server based on swoole",
     "keywords": [

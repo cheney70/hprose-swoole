@@ -49,7 +49,7 @@ More Documents for Hprose 2.0: https://github.com/hprose/hprose-php/wiki
 ```javascript
 {
     "require": {
-        "hprose/hprose-swoole": "dev-master"
+        "cheney70/hprose-swoole": "dev-master"
     }
 }
 ```
@@ -197,3 +197,11 @@ The result of invoking is a promise object, you can also specify the callback fu
 |result   |The result is the server returned, if no result, its value is null.|
 |arguments|It is an array of arguments. if no argument, it is an empty array. |
 |error    |It is an object of Exception, if no error, its value is null.      |
+
+###
+swoole_async_set 函数
+
+### 修复异步调用问题（新版本Swoole 连接方式更新过了）
+//$conn = new swoole_client($client->type, SWOOLE_SOCK_ASYNC);
+//todo 异步操作链接方式已更新
+$conn = new \Swoole\Async\Client(SWOOLE_SOCK_TCP);

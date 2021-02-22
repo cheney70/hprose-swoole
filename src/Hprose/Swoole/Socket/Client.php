@@ -38,10 +38,10 @@ class Client extends \Hprose\Client {
     private $hdtrans;
     public function __construct($uris = null) {
         parent::__construct($uris);
-        swoole_async_set(array(
+        /*swoole_async_set(array(
             "socket_buffer_size" => 2 * 1024 * 1024 * 1024 - 1,
             "socket_dontwait" => false
-        ));
+        ));*/
     }
     public function getHost() {
         return $this->host;

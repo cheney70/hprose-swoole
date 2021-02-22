@@ -82,7 +82,10 @@ abstract class Transporter {
     }
     public function create() {
         $client = $this->client;
-        $conn = new swoole_client($client->type, SWOOLE_SOCK_ASYNC);
+        //$conn = new swoole_client($client->type, SWOOLE_SOCK_ASYNC);
+        //异步操作链接方式已更新
+        $conn = new \Swoole\Async\Client(SWOOLE_SOCK_TCP);
+
         // The type is changed after new swoole_client in old version swoole.
         // The new version swoole is fixed this bug.
         $client->type &= 0xFF;
